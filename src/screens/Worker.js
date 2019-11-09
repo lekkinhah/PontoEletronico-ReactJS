@@ -30,8 +30,8 @@ export default function Books() {
 
     const [active, setActive] = useState(false)
 
-    const { data, queryLoading, refetch } = useQuery(myRegisteredTimes)
-    const [mutate,  { mutationLoading }] = useMutation(createRegisteredTime)
+    const { data, loading: queryLoading, refetch } = useQuery(myRegisteredTimes)
+    const [mutate,  { loading: mutationLoading }] = useMutation(createRegisteredTime)
 
     async function addRegisteredTime() {
         const timeRegistered = new Date().toISOString();
